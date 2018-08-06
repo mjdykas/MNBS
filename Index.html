@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+</head>
+<script src="Scripts/jquery-3.1.1.slim.js"></script>
+
+<style>
+
+	.GameDiv{display: flex; border-style: solid; margin: auto; transform: scale(0.7); height: 570px; width: 760px }
+	.img-responsive{}
+</style>	
+	
+<div><button type="button" id="LoadGameFromExternalHTML">Press button</button></div>
+<div class="GameDiv" id="GameDiv"></div>	
+
+
+
+	
+<script>
+
+$(window).on('load', function () { 
+	if (window.matchMedia('(display-mode: standalone)').matches){
+		alert("I am a windows app.");	
+	} else {
+		alert("I am not a windows app.");
+}});
+		
+	
+	$('#LoadGameFromExternalHTML').click(function(){ 
+       $("#GameDiv").html('<object width="760" height="570" class="img-responsive" name="VideoGame" data="Games/Webninja/index.html"/>');
+});
+	
+</script>
+	
+	
+	
+<body>
+</body>
+</html>
